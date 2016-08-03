@@ -19,12 +19,12 @@ describe('Plugin', function() {
     var content = '<strong>{{weak}}</strong>';
     var expected = '<strong>wat</strong>';
 
-    plugin.compile(content, 'template.rac', function(error, data) {
+    plugin.compile(content, 'template.mustache', function(error, data) {
       var r;
 
       expect(error).not.to.be.ok;
       r = new Ractive({'template': eval(data), 'data': {'weak': 'wat'}});
-      expect(r.renderHTML()).to.equal(expected);
+      expect(r.toHTML()).to.equal(expected);
       done();
     });
   });

@@ -7,6 +7,7 @@ module.exports = class RactiveCompiler
   type: 'template'
   extension: 'mustache'
   pattern: /\.(?:hbs|mustache)$/
+  # pathReplace = /^.*templates\//
 
   constructor: (@config) ->
     null
@@ -19,7 +20,6 @@ module.exports = class RactiveCompiler
     finally
       callback error, result
 
-  include: [
-    (sysPath.join __dirname, '..', 'vendor',
-      'Ractive.runtime-0.3.6.js')
-  ]
+  # include: [
+  #   (sysPath.join __dirname, '..', 'node_modules', 'ractive', 'ractive.runtime.js')
+  # ]
