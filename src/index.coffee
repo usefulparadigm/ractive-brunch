@@ -5,8 +5,8 @@ sysPath = require 'path'
 module.exports = class RactiveCompiler
   brunchPlugin: yes
   type: 'template'
-  extension: 'mustache'
-  pattern: /\.(?:hbs|mustache)$/
+  extension: 'rac'
+  pattern: /\.(?:rac|ractive)$/
   # pathReplace = /^.*templates\//
 
   constructor: (@config) ->
